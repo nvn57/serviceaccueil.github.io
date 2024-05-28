@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Bateaux2.css" />
+	<title>BATEAUX PARISIEN</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+<script>
+    function handleFile(e) {
+        const files = e.target.files;
+        if (files.length == 0) return;
+        const file = files[0];
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const data = new Uint8Array(e.target.result);
+            const workbook = XLSX.read(data, {type: 'array'});
+            const sheetName = workbook.SheetNames[0];
+            const sheet = workbook.Sheets[sheetName];
+            const html = XLSX.utils.sheet_to_html(sheet);
+            document.getElementById('output').innerHTML = html;
+        };
+        reader.readAsArrayBuffer(file);
+    }
+</script>
+</head>
+<body>
+	<div id="bloc_page">
+	<header>
+		<div id="tittre_principal">
+			<div id="logo">
+				<img src="logoBP.png" alt="Bateux parisien Logo" />
+				<h1>BATEAUX PARISIENS SERVICE BILLETTERIE ACCUEIL</h1>
+			</div>
+		</div>	
+		<nav>
+			<ul>
+				<li><a href="Bateaux.html">Accueil</a></li>
+				<li><a href="qrcode.html">Buy Tickets</a></li>
+				<li><a href="tarif.html">Tarifs</a></li>
+				<li><a href="horaire.html">Departs</a></li>
+				<li><a href="groupes.html">Groupes</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+<input type="file" accept=".xlsx, .xls" onchange="handleFile(event)">
+<div id="output"></div>
+
+<section>
+
+	
+</section>
+
+<footer>
+	<div id="social_media">
+		<h3>FOLLOW US ON OUR SOCIAL MEDIA </h3>
+		<div id="list_sm">
+			<ul>
+				<li><img id="facebook" src="facebook.png" alt="Facebook"/><p> <a href="#">@bateauxparisiens</a></p></li>
+				<li><img id="instagram" src="instagram.png" alt="Instagram"/><p> <a href="#">@bateauxparisiens</a></p></li>
+				<li><img id="twitter" src="x.png" alt="Twitter"/><p> <a href="#">@bateauxparisiens</a></p></li>
+				<li><img id="tiktok" src="tiktok.png" alt="Tiktok"/><p> <a href="#">@bateauxparisiens</a></p></li>
+			</ul>	
+		</div>
+
+		
+	</div>
+	
+</footer>
+
+</div>
+
+</body>
+</html>

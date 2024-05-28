@@ -1,0 +1,162 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set body background color */
+body {
+  background-color: #f3f3f3;
+  font-family: Arial, sans-serif;
+}
+
+/* Style header */
+header {
+  background-color: #7D7A7A;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#logo img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+header h1 {
+  margin-top: 10px;
+  font-family: Marker Felt, fantasy;
+  font-size: 40px;
+  color: #C2001F;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #ffa500;
+  text-decoration: none;
+  font-size: 25px;
+}
+table {
+  font-family: ariel, sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 8px;
+  width: 100%;
+}
+
+td, th, tr{
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+tr:nth-child(even){
+  background-color: #40E0D0;
+}
+
+/* Style section */
+section {
+  padding: 50px;
+}
+section h1
+{
+  font-family: Marker Felt, fantasy;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style article */
+article {
+  margin-bottom: 40px;
+}
+
+article h2 {
+  color: #ffa500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Flex display for image and paragraph */
+#para1, #para2, #para3 #para4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#para1 img, #para2 img, #para3 img, #para4 img {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  align-items: center;
+}
+
+#para1 p, #para2 p, #para3 p, #para4 p {
+  width: 70%;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+/* Style footer */
+footer {
+  background-color: #615F5F;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#social_media ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+#social_media ul li {
+  margin-right: 20px;
+}
+
+#social_media ul li img {
+  width: 40px;
+  height: 40px;
+}
+
+#social_media ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#box {
+    padding: 20px;
+}
+
+#box h1
+{
+  text-align: center;
+}
+
+aside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+aside div {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+aside div img {
+    max-width: 200px;
+    margin-bottom: 10px;
+}
